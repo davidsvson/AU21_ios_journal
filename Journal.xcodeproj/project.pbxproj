@@ -16,6 +16,9 @@
 		634233EF274F7E5100AE6EED /* JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233EE274F7E5100AE6EED /* JournalUITests.swift */; };
 		634233F1274F7E5100AE6EED /* JournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233F0274F7E5100AE6EED /* JournalUITestsLaunchTests.swift */; };
 		634233FE274F800000AE6EED /* JournalTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233FD274F800000AE6EED /* JournalTableTableViewController.swift */; };
+		63423400274F8BC900AE6EED /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233FF274F8BC900AE6EED /* JournalEntry.swift */; };
+		63423402274F931100AE6EED /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63423401274F931100AE6EED /* Journal.swift */; };
+		63423406274FA07400AE6EED /* NewJournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63423405274FA07400AE6EED /* NewJournalEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		634233EE274F7E5100AE6EED /* JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUITests.swift; sourceTree = "<group>"; };
 		634233F0274F7E5100AE6EED /* JournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		634233FD274F800000AE6EED /* JournalTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableTableViewController.swift; sourceTree = "<group>"; };
+		634233FF274F8BC900AE6EED /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		63423401274F931100AE6EED /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		63423405274FA07400AE6EED /* NewJournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJournalEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,11 @@
 		634233CC274F7E4F00AE6EED /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				63423404274FA01500AE6EED /* ViewControllers */,
+				63423403274FA00400AE6EED /* Model */,
 				634233CD274F7E4F00AE6EED /* AppDelegate.swift */,
 				634233CF274F7E4F00AE6EED /* SceneDelegate.swift */,
 				634233D3274F7E4F00AE6EED /* Main.storyboard */,
-				634233FD274F800000AE6EED /* JournalTableTableViewController.swift */,
 				634233D6274F7E5100AE6EED /* Assets.xcassets */,
 				634233D8274F7E5100AE6EED /* LaunchScreen.storyboard */,
 				634233DB274F7E5100AE6EED /* Info.plist */,
@@ -125,6 +132,24 @@
 				634233F0274F7E5100AE6EED /* JournalUITestsLaunchTests.swift */,
 			);
 			path = JournalUITests;
+			sourceTree = "<group>";
+		};
+		63423403274FA00400AE6EED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				634233FF274F8BC900AE6EED /* JournalEntry.swift */,
+				63423401274F931100AE6EED /* Journal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63423404274FA01500AE6EED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				634233FD274F800000AE6EED /* JournalTableTableViewController.swift */,
+				63423405274FA07400AE6EED /* NewJournalEntryViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				634233CE274F7E4F00AE6EED /* AppDelegate.swift in Sources */,
+				63423402274F931100AE6EED /* Journal.swift in Sources */,
+				63423406274FA07400AE6EED /* NewJournalEntryViewController.swift in Sources */,
 				634233FE274F800000AE6EED /* JournalTableTableViewController.swift in Sources */,
+				63423400274F8BC900AE6EED /* JournalEntry.swift in Sources */,
 				634233D0274F7E4F00AE6EED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

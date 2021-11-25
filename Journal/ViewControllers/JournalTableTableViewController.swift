@@ -8,14 +8,24 @@
 import UIKit
 
 class JournalTableTableViewController: UITableViewController {
+    
+    let newEntrySegueId = "createJournalEntry"
+    let journalEntrySegueId = "showJournalEntry"
 
     let cellIdentity = "JournalEntryCell"
     
-    var tableData = ["David", "Susan", "Lois", "Laura" ]
+  // var journalEntries = [JournalEntry]()
     
-
+    let journal = Journal()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        journal.add(entry: JournalEntry(content: "Åt mat"))
+        journal.add(entry: JournalEntry(content: "sov"))
+        
+
+        
     }
 
     // MARK: - Table view data source
@@ -27,14 +37,15 @@ class JournalTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return tableData.count
+        return journal.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentity, for: indexPath)
 
-        cell.textLabel?.text = tableData[indexPath.row]
+        let journalEntry = journal.entry(index: indexPath.row)
+        cell.textLabel?.text = journalEntry?.date
 
         return cell
     }
