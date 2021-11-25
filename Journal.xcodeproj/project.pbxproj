@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		634233CE274F7E4F00AE6EED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233CD274F7E4F00AE6EED /* AppDelegate.swift */; };
 		634233D0274F7E4F00AE6EED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233CF274F7E4F00AE6EED /* SceneDelegate.swift */; };
-		634233D2274F7E4F00AE6EED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233D1274F7E4F00AE6EED /* ViewController.swift */; };
 		634233D5274F7E4F00AE6EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634233D3274F7E4F00AE6EED /* Main.storyboard */; };
 		634233D7274F7E5100AE6EED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634233D6274F7E5100AE6EED /* Assets.xcassets */; };
 		634233DA274F7E5100AE6EED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634233D8274F7E5100AE6EED /* LaunchScreen.storyboard */; };
 		634233E5274F7E5100AE6EED /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233E4274F7E5100AE6EED /* JournalTests.swift */; };
 		634233EF274F7E5100AE6EED /* JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233EE274F7E5100AE6EED /* JournalUITests.swift */; };
 		634233F1274F7E5100AE6EED /* JournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233F0274F7E5100AE6EED /* JournalUITestsLaunchTests.swift */; };
+		634233FE274F800000AE6EED /* JournalTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233FD274F800000AE6EED /* JournalTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		634233CA274F7E4F00AE6EED /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634233CD274F7E4F00AE6EED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634233CF274F7E4F00AE6EED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		634233D1274F7E4F00AE6EED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		634233D4274F7E4F00AE6EED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		634233D6274F7E5100AE6EED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		634233D9274F7E5100AE6EED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		634233EA274F7E5100AE6EED /* JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		634233EE274F7E5100AE6EED /* JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUITests.swift; sourceTree = "<group>"; };
 		634233F0274F7E5100AE6EED /* JournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		634233FD274F800000AE6EED /* JournalTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 			children = (
 				634233CD274F7E4F00AE6EED /* AppDelegate.swift */,
 				634233CF274F7E4F00AE6EED /* SceneDelegate.swift */,
-				634233D1274F7E4F00AE6EED /* ViewController.swift */,
 				634233D3274F7E4F00AE6EED /* Main.storyboard */,
+				634233FD274F800000AE6EED /* JournalTableTableViewController.swift */,
 				634233D6274F7E5100AE6EED /* Assets.xcassets */,
 				634233D8274F7E5100AE6EED /* LaunchScreen.storyboard */,
 				634233DB274F7E5100AE6EED /* Info.plist */,
@@ -258,8 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634233D2274F7E4F00AE6EED /* ViewController.swift in Sources */,
 				634233CE274F7E4F00AE6EED /* AppDelegate.swift in Sources */,
+				634233FE274F800000AE6EED /* JournalTableTableViewController.swift in Sources */,
 				634233D0274F7E4F00AE6EED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
