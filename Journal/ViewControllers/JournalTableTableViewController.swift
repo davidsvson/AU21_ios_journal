@@ -53,8 +53,6 @@ class JournalTableTableViewController: UITableViewController {
         return cell
     }
     
-
-    
     
     // MARK: - Navigation
 
@@ -63,11 +61,31 @@ class JournalTableTableViewController: UITableViewController {
         if segue.identifier == newEntrySegueId {
             let destinationVC = segue.destination as? NewJournalEntryViewController
             destinationVC?.journal = journal
+        } else if ( segue.identifier == journalEntrySegueId) {
+//            if let destinationVC = segue.destination as? JournalEntryViewController {
+//                if let cell = sender as? UITableViewCell {
+//                    if let indexPath = tableView.indexPath(for: cell) {
+//                        if let entry = journal.entry(index: indexPath.row) {
+//                            destinationVC.journalEntry = entry
+//                        }
+//                    }
+//                }
+//            }
             
+//            if let destinationVC = segue.destination as? JournalEntryViewController,
+//                let cell = sender as? UITableViewCell,
+//                let indexPath = tableView.indexPath(for: cell),
+//                let entry = journal.entry(index: indexPath.row) {
+//                    destinationVC.journalEntry = entry
+//                }
+            
+            guard let destinationVC = segue.destination as? JournalEntryViewController else { return }
+            guard let cell = sender as? UITableViewCell else { return }
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
+            guard let entry = journal.entry(index: indexPath.row) else { return }
+                    
+            destinationVC.journalEntry = entry
+                
         }
-        
-        
     }
-    
-
 }

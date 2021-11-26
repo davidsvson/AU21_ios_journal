@@ -18,6 +18,9 @@ class NewJournalEntryViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        print("dismiss")
+    }
     
 
     @IBAction func save(_ sender: UIBarButtonItem) {

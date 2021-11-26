@@ -46,20 +46,38 @@
             </objects>
             <point key="canvasLocation" x="389.85507246376812" y="91.741071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Journal Entry View Controller-->
         <scene sceneID="FwD-Cl-Flb">
             <objects>
-                <viewController id="C5S-1o-aCf" sceneMemberID="viewController">
+                <viewController id="C5S-1o-aCf" customClass="JournalEntryViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l1X-3b-g2t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xj-99-2fz">
+                                <rect key="frame" x="50" y="50" width="314" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="c9v-44-K52"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Xj-99-2fz" firstAttribute="leading" secondItem="c9v-44-K52" secondAttribute="leading" constant="50" id="3k3-u5-8nN"/>
+                            <constraint firstItem="c9v-44-K52" firstAttribute="trailing" secondItem="1Xj-99-2fz" secondAttribute="trailing" constant="50" id="E6m-T7-OJT"/>
+                            <constraint firstItem="1Xj-99-2fz" firstAttribute="top" secondItem="c9v-44-K52" secondAttribute="top" constant="50" id="WFu-2b-5w5"/>
+                            <constraint firstItem="c9v-44-K52" firstAttribute="bottom" secondItem="1Xj-99-2fz" secondAttribute="bottom" constant="50" id="f2M-lB-h3z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="entryTextView" destination="1Xj-99-2fz" id="JSG-jf-XU1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SW-i3-T0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="538"/>
+            <point key="canvasLocation" x="1260.8695652173915" y="537.05357142857144"/>
         </scene>
         <!--New Journal Entry View Controller-->
         <scene sceneID="lDq-ar-D0W">
@@ -89,6 +107,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WuR-ke-QMm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3bH-zl-Yw4">
+                            <connections>
+                                <action selector="cancel:" destination="PFg-Zc-nj0" id="E1E-iU-QS0"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="5FB-Ly-xZQ">
                             <connections>
                                 <action selector="save:" destination="PFg-Zc-nj0" id="gCv-ka-lGJ"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6311C41E2750DAC900C5AE36 /* JournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6311C41D2750DAC900C5AE36 /* JournalEntryViewController.swift */; };
 		634233CE274F7E4F00AE6EED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233CD274F7E4F00AE6EED /* AppDelegate.swift */; };
 		634233D0274F7E4F00AE6EED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634233CF274F7E4F00AE6EED /* SceneDelegate.swift */; };
 		634233D5274F7E4F00AE6EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634233D3274F7E4F00AE6EED /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6311C41D2750DAC900C5AE36 /* JournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryViewController.swift; sourceTree = "<group>"; };
 		634233CA274F7E4F00AE6EED /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634233CD274F7E4F00AE6EED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634233CF274F7E4F00AE6EED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				634233FD274F800000AE6EED /* JournalTableTableViewController.swift */,
 				63423405274FA07400AE6EED /* NewJournalEntryViewController.swift */,
+				6311C41D2750DAC900C5AE36 /* JournalEntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				63423402274F931100AE6EED /* Journal.swift in Sources */,
 				63423406274FA07400AE6EED /* NewJournalEntryViewController.swift in Sources */,
 				634233FE274F800000AE6EED /* JournalTableTableViewController.swift in Sources */,
+				6311C41E2750DAC900C5AE36 /* JournalEntryViewController.swift in Sources */,
 				63423400274F8BC900AE6EED /* JournalEntry.swift in Sources */,
 				634233D0274F7E4F00AE6EED /* SceneDelegate.swift in Sources */,
 			);
