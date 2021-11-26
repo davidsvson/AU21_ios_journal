@@ -26,11 +26,15 @@ class JournalTableTableViewController: UITableViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+//    override func viewWillAppear(_ animated: Bool) {
+//        tableView.reloadData()
+//    }
+    
+    func refresh() {
         tableView.reloadData()
     }
     
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,6 +64,8 @@ class JournalTableTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == newEntrySegueId {
             let destinationVC = segue.destination as? NewJournalEntryViewController
+            
+            destinationVC?.journalVC = self
             destinationVC?.journal = journal
         } else if ( segue.identifier == journalEntrySegueId) {
 //            if let destinationVC = segue.destination as? JournalEntryViewController {

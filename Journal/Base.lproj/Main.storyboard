@@ -37,7 +37,7 @@
                     <navigationItem key="navigationItem" id="yMF-XK-AfU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0a6-zh-PN8">
                             <connections>
-                                <segue destination="PFg-Zc-nj0" kind="show" identifier="createJournalEntry" id="jqm-ak-CcO"/>
+                                <segue destination="PFg-Zc-nj0" kind="presentation" identifier="createJournalEntry" id="jqm-ak-CcO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -84,11 +84,11 @@
             <objects>
                 <viewController id="PFg-Zc-nj0" customClass="NewJournalEntryViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pWS-Cp-Rq0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xhk-Li-JOf">
-                                <rect key="frame" x="87" y="154" width="240" height="484"/>
+                                <rect key="frame" x="87" y="66" width="240" height="484"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ITH-2Q-ApB"/>
@@ -98,6 +98,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVM-CS-hSZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="8UY-tx-u4F">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3bH-zl-Yw4">
+                                            <connections>
+                                                <action selector="cancel:" destination="PFg-Zc-nj0" id="E1E-iU-QS0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5FB-Ly-xZQ">
+                                            <connections>
+                                                <action selector="save:" destination="PFg-Zc-nj0" id="gCv-ka-lGJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4gg-6J-9TU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,20 +124,10 @@
                             <constraint firstItem="Xhk-Li-JOf" firstAttribute="centerX" secondItem="pWS-Cp-Rq0" secondAttribute="centerX" id="kBP-LW-Odu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WuR-ke-QMm">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3bH-zl-Yw4">
-                            <connections>
-                                <action selector="cancel:" destination="PFg-Zc-nj0" id="E1E-iU-QS0"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5FB-Ly-xZQ">
-                            <connections>
-                                <action selector="save:" destination="PFg-Zc-nj0" id="gCv-ka-lGJ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="WuR-ke-QMm"/>
                     <connections>
                         <outlet property="journalEntryTextView" destination="Xhk-Li-JOf" id="znX-n3-0Q7"/>
+                        <outlet property="navBar" destination="8UY-tx-u4F" id="54j-he-d8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXL-XJ-MK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

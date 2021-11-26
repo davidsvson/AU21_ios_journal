@@ -9,27 +9,37 @@ import UIKit
 
 class NewJournalEntryViewController: UIViewController {
 
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var journalEntryTextView: UITextView!
     
     var journal : Journal?
+    var  journalVC : JournalTableTableViewController?
+    
+    var entry = JournalEntry(content:"")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navBar.title = entry.date
+        
         journalEntryTextView.becomeFirstResponder()
     }
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
+       // navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
 
     @IBAction func save(_ sender: UIBarButtonItem) {
         
         if let entryText = journalEntryTextView.text {
-            let newJournalEntry = JournalEntry(content: entryText)
+            entry.content = entryText
             
-            journal?.add(entry: newJournalEntry)
-            navigationController?.popViewController(animated: true)
+            journal?.add(entry: entry)
+            journalVC?.refresh()
+            dismiss(animated: true, completion: nil)
+           // navigationController?.popViewController(animated: true)
+            
         }
     }
     
