@@ -24,9 +24,12 @@ class JournalTableTableViewController: UITableViewController {
         journal.add(entry: JournalEntry(content: "Åt mat"))
         journal.add(entry: JournalEntry(content: "sov"))
         
-
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
 
     // MARK: - Table view data source
 
@@ -52,14 +55,19 @@ class JournalTableTableViewController: UITableViewController {
     
 
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == newEntrySegueId {
+            let destinationVC = segue.destination as? NewJournalEntryViewController
+            destinationVC?.journal = journal
+            
+        }
+        
+        
     }
-    */
+    
 
 }

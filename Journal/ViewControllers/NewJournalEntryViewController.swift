@@ -11,6 +11,8 @@ class NewJournalEntryViewController: UIViewController {
 
     @IBOutlet weak var journalEntryTextView: UITextView!
     
+    var journal : Journal?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,12 +24,9 @@ class NewJournalEntryViewController: UIViewController {
         
         if let entryText = journalEntryTextView.text {
             let newJournalEntry = JournalEntry(content: entryText)
-            print(newJournalEntry.content)
             
-            // TODO: lägg till entry till vår Journal
+            journal?.add(entry: newJournalEntry)
         }
-        
-        
     }
     
     /*
