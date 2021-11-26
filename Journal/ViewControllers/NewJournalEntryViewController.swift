@@ -16,10 +16,10 @@ class NewJournalEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        journalEntryTextView.becomeFirstResponder()
     }
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        print("dismiss")
+        navigationController?.popViewController(animated: true)
     }
     
 
@@ -29,6 +29,7 @@ class NewJournalEntryViewController: UIViewController {
             let newJournalEntry = JournalEntry(content: entryText)
             
             journal?.add(entry: newJournalEntry)
+            navigationController?.popViewController(animated: true)
         }
     }
     
